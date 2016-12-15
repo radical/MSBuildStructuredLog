@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Build.Logging.StructuredLogger;
+using Microsoft.Build.Logging.StructuredLoggerHost;
 
 namespace StructuredLogViewer
 {

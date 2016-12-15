@@ -24,6 +24,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\StructuredLoggerHost\StructuredLoggerHost.csproj">
+      <Project>{061c5ddf-fb4a-41b7-983d-0bd336c9d4ef}</Project>
+      <Name>StructuredLoggerHost</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StructuredLogger\StructuredLogger.csproj">
       <Project>{a939886e-a191-4a46-a84b-21ad670081b9}</Project>
       <Name>StructuredLogger</Name>
@@ -44,9 +48,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuildAnalyzer.cs" />
     <Compile Include="BuildParametersScreen.cs" />
-    <Compile Include="BuildProgress.cs" />
     <Compile Include="Controls\BuildControl.xaml.cs">
       <DependentUpon>BuildControl.xaml</DependentUpon>
     </Compile>
@@ -55,18 +57,13 @@
     <Compile Include="Controls\StringEmptinessToVisibilityConverter.cs" />
     <Compile Include="Controls\TreeViewExtensions.cs" />
     <Compile Include="Entrypoint.cs" />
-    <Compile Include="ExceptionHandler.cs" />
     <Compile Include="HighlightedText.cs" />
-    <Compile Include="HostedBuild.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MSBuildLocator.cs" />
     <Compile Include="ProxyNode.cs" />
-    <Compile Include="Search.cs" />
-    <Compile Include="SearchResult.cs" />
-    <Compile Include="SettingsService.cs" />
     <Compile Include="TypingConcurrentOperation.cs" />
+    <Compile Include="ViewerUtilities.cs" />
     <Compile Include="WelcomeScreen.cs" />
   </ItemGroup>
   <ItemGroup>

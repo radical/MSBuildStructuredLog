@@ -24,6 +24,10 @@
     <Compile Include="Roundtrip.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\StructuredLoggerHost\StructuredLoggerHost.csproj">
+      <Project>{061c5ddf-fb4a-41b7-983d-0bd336c9d4ef}</Project>
+      <Name>StructuredLoggerHost</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StructuredLogger\StructuredLogger.csproj">
       <Project>{a939886e-a191-4a46-a84b-21ad670081b9}</Project>
       <Name>StructuredLogger</Name>

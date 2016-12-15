@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Microsoft.Win32;
 
 namespace StructuredLogViewer
 {
@@ -29,19 +28,5 @@ namespace StructuredLogViewer
             }.Where(File.Exists).ToArray();
         }
 
-        public static void BrowseForMSBuildExe()
-        {
-            var openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "MSBuild.exe|MSBuild.exe";
-            openFileDialog.Title = "Select MSBuild.exe location";
-            openFileDialog.CheckFileExists = true;
-            var result = openFileDialog.ShowDialog();
-            if (result != true)
-            {
-                return;
-            }
-
-            SettingsService.AddRecentMSBuildLocation(openFileDialog.FileName);
-        }
     }
 }

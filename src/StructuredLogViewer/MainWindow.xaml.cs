@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Microsoft.Build.Logging.StructuredLogger;
+using Microsoft.Build.Logging.StructuredLoggerHost;
 using Microsoft.Win32;
 using Squirrel;
 using StructuredLogViewer.Controls;
@@ -444,7 +445,7 @@ namespace StructuredLogViewer
 
         private void SetMSBuild_Click(object sender, RoutedEventArgs e)
         {
-            MSBuildLocator.BrowseForMSBuildExe();
+            ViewerUtilities.BrowseForMSBuildExe();
 
             var buildParametersScreen = mainContent.Content as BuildParametersScreen;
             if (buildParametersScreen != null)

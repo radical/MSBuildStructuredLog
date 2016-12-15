@@ -1,4 +1,6 @@
-﻿namespace Microsoft.Build.Logging.StructuredLogger
+﻿using Microsoft.Build.Logging.StructuredLogger;
+
+namespace Microsoft.Build.Logging.StructuredLoggerHost
 {
     public class BuildProgress : ObservableObject
     {

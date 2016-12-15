@@ -96,7 +96,7 @@ namespace Microsoft.Build.Logging.StructuredLogger
         public ICommand BrowseForMSBuildCommand => browseForMSBuildCommand ?? (browseForMSBuildCommand = new Command(BrowseForMSBuild));
         private void BrowseForMSBuild()
         {
-            MSBuildLocator.BrowseForMSBuildExe();
+            ViewerUtilities.BrowseForMSBuildExe();
             UpdateMSBuildLocations();
         }
     }
