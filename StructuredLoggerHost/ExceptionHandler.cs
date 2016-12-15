@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Build.Logging.StructuredLogger;
 
-namespace StructuredLogViewer
+namespace Microsoft.Build.Logging.StructuredLoggerHost
 {
     public class ExceptionHandler
     {

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using Microsoft.Build.Logging.StructuredLogger;
+using Microsoft.Build.Logging.StructuredLoggerHost;
 using StructuredLogViewer;
 using Xunit;
 

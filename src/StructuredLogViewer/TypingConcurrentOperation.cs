@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using Microsoft.Build.Logging.StructuredLogger;
+using Microsoft.Build.Logging.StructuredLoggerHost;
 using StructuredLogViewer.Controls;
 using TPLTask = System.Threading.Tasks.Task;
 

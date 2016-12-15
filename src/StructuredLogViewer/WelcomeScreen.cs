@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Input;
+using Microsoft.Build.Logging.StructuredLoggerHost;
 using StructuredLogViewer;
 
 namespace Microsoft.Build.Logging.StructuredLogger

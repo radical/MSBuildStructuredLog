@@ -3,9 +3,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Build.Logging.StructuredLogger;
-using Microsoft.Build.Logging.StructuredLoggerHost;
+using SLBuild = Microsoft.Build.Logging.StructuredLogger.Build;
+using SLStructuredLogger = Microsoft.Build.Logging.StructuredLogger.StructuredLogger;
 
-namespace StructuredLogViewer
+namespace Microsoft.Build.Logging.StructuredLoggerHost
 {
     public class HostedBuild
     {
@@ -37,11 +38,11 @@ namespace StructuredLogViewer
 
         public static string GetPostfixArguments()
         {
-            var loggerDll = typeof(StructuredLogger).Assembly.Location;
+            var loggerDll = typeof(SLStructuredLogger).Assembly.Location;
             return $@"/v:diag /nologo /noconlog /logger:{nameof(StructuredLogger)},""{loggerDll}"";""{logFilePath}""";
         }
 
-        public Task<Build> BuildAndGetResult(BuildProgress progress)
+        public Task<SLBuild> BuildAndGetResult(BuildProgress progress)
         {
             var msbuildExe = SettingsService.GetMSBuildExe();
             var postfixArguments = GetPostfixArguments();
@@ -68,7 +69,7 @@ namespace StructuredLogViewer
                 }
                 catch (Exception ex)
                 {
-                    var build = new Build();
+                    var build = new SLBuild();
                     build.Succeeded = false;
                     build.AddChild(new Message() { Text = "Exception occurred during build:" });
                     build.AddChild(new Error() { Text = ex.ToString() });

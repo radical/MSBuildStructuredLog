@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using Microsoft.Build.Logging.StructuredLogger;
+using SLBuild = Microsoft.Build.Logging.StructuredLogger.Build;
 
-namespace Microsoft.Build.Logging.StructuredLogger
+namespace Microsoft.Build.Logging.StructuredLoggerHost
 {
     public class BuildAnalyzer
     {
-        private Build build;
+        private SLBuild build;
 
-        public BuildAnalyzer(Build build)
+        public BuildAnalyzer(SLBuild build)
         {
             this.build = build;
         }
 
-        public static void AnalyzeBuild(Build build)
+        public static void AnalyzeBuild(SLBuild build)
         {
             if (build.IsAnalyzed)
             {
@@ -30,7 +32,7 @@ namespace Microsoft.Build.Logging.StructuredLogger
             Seal(build);
         }
 
-        private static void Seal(Build build)
+        private static void Seal(SLBuild build)
         {
             build.VisitAllChildren<TreeNode>(t => t.Seal());
         }
@@ -192,7 +194,7 @@ namespace Microsoft.Build.Logging.StructuredLogger
             }
         }
 
-        public IEnumerable<Project> GetProjectsSortedTopologically(Build build)
+        public IEnumerable<Project> GetProjectsSortedTopologically(SLBuild build)
         {
             var visited = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             var list = new List<Project>();

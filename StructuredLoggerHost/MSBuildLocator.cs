@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace StructuredLogViewer
+namespace Microsoft.Build.Logging.StructuredLoggerHost
 {
     public class MSBuildLocator
     {

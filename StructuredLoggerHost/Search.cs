@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Microsoft.Build.Logging.StructuredLogger;
+using SLBuild = Microsoft.Build.Logging.StructuredLogger.Build;
 
-namespace StructuredLogViewer
+namespace Microsoft.Build.Logging.StructuredLoggerHost
 {
     public class Search
     {
         public const int MaxResults = 500;
 
-        private Build build;
+        private SLBuild build;
         private string query;
         private List<SearchResult> resultSet;
 
-        public Search(Build build)
+        public Search(SLBuild build)
         {
             this.build = build;
         }

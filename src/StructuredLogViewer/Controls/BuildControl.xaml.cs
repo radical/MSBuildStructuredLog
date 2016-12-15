@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Threading;
 using Microsoft.Build.Logging.StructuredLogger;
+using Microsoft.Build.Logging.StructuredLoggerHost;
 
 namespace StructuredLogViewer.Controls
 {

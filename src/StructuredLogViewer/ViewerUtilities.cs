@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32;
 
-namespace StructuredLogViewer
+namespace Microsoft.Build.Logging.StructuredLoggerHost
 {
     class ViewerUtilities
     {

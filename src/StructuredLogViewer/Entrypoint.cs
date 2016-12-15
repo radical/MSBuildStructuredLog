@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using System.Windows;
+using Microsoft.Build.Logging.StructuredLoggerHost;
 
 [assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("MSBuild Structured Log Viewer")]
